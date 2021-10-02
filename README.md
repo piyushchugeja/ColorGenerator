@@ -1,5 +1,5 @@
 # JavaScript based random color generator
- This project generates random hex colors which can be used by developers and designers if they every struggle with color selection.
+ This project generates random hex colors which can be used by developers and designers if they ever struggle with color selection.
  
  - Super easy to use
  <img src="https://user-images.githubusercontent.com/66639966/135715545-9848a891-f619-4ad8-b462-a58d9a578cd4.png" />
