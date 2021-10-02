@@ -2,7 +2,6 @@
 * {
     box-sizing: border-box;
 }
-
 body {
     font-family: 'PT Sans', sans-serif;
     background-color: #dcdcdc;
@@ -10,7 +9,6 @@ body {
     height: 100vh;
     margin: 0;
 }
-
 /* Glowing Button */
 .glowingButton {
     padding: 1.5em;
@@ -26,7 +24,6 @@ body {
     font-size: 18px;
     transition: all 0.3s ease-in-out;
 }
-
 .glowingButton:before {
     content: "";
     background: linear-gradient(
@@ -54,7 +51,6 @@ body {
     transition: opacity 0.3s ease-in-out;
     border-radius: 10px;
 }
-
 @keyframes buttonGlow {
     0% {
         background-position: 0 0;
@@ -66,18 +62,15 @@ body {
         background-position: 0 0;
     }
 }
-
 .glowingButton:active {
     color: #000;
 }
 .glowingButton:active:after {
     background: #fff;
 }
-
 .glowingButton:hover:before {
     opacity: 1;
 }
-
 .glowingButton:after {
     z-index: -1;
     content: "";
@@ -96,7 +89,6 @@ body {
         top: 12em;
     }
 }
-
 /* Glass Box */
 .centeredBox {
     position: absolute;
@@ -107,20 +99,17 @@ body {
     text-align: center;
     height: 200px;
 }
-
 .centeredBox.glass {
     backdrop-filter: blur(17px) saturate(152%);
     -webkit-backdrop-filter: blur(17px) saturate(152%);
     background-color: rgba(17, 25, 40, 0.56);
     border-radius: 12px;
 }
-
 @media screen and (max-width: 768px) {
     .centeredBox {
         width: 60%;
     }
 }
-
 /* Text holder and copy button */
 .centeredBox .textHolder {
     position: absolute;
@@ -134,7 +123,6 @@ body {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
-
 input.colorHolder {
     width: 70%;
     background: #fff;
@@ -150,17 +138,14 @@ input.colorHolder {
     text-align: center;
     font-size: 1.8em;
 }
-
 input.colorHolder:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .2);
 }
-
 /* Tooltip */
 .tooltip {
     position: relative;
     display: inline-block;
 }
-
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
@@ -177,7 +162,6 @@ input.colorHolder:hover {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
@@ -188,7 +172,6 @@ input.colorHolder:hover {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
-
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
