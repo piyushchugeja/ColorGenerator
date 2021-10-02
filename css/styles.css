@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #dcdcdc;
+    overflow-y: auto;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Glowing Button */
+.glowingButton {
+    padding: 1.5em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    top: 10em;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.glowingButton:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #3B0000,
+        #FFF6CD,
+        #FF0000,
+        #FFF6CD,
+        #170055,
+        #B1FFFD,
+        #FFEF78,
+        #C400FF,
+        #3B0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: buttonGlow 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes buttonGlow {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glowingButton:active {
+    color: #000;
+}
+.glowingButton:active:after {
+    background: #fff;
+}
+
+.glowingButton:hover:before {
+    opacity: 1;
+}
+
+.glowingButton:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 600px) {
+    .glowingButton {
+        font-size: 14px;
+        top: 12em;
+    }
+}
+
+/* Glass Box */
+.centeredBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    text-align: center;
+    height: 200px;
+}
+
+.centeredBox.glass {
+    backdrop-filter: blur(17px) saturate(152%);
+    -webkit-backdrop-filter: blur(17px) saturate(152%);
+    background-color: rgba(17, 25, 40, 0.56);
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .centeredBox {
+        width: 60%;
+    }
+}
+
+/* Text holder and copy button */
+.centeredBox .textHolder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+input.colorHolder {
+    width: 70%;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+    transition: all 200ms ease-in;
+    border-radius: 10px;
+    font-size: medium;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+input.colorHolder:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .2);
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
