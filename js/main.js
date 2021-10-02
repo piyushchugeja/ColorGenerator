@@ -9,6 +9,7 @@ function generateColor() {
     }
     body.style.backgroundColor = color;
     colorBox.value = color;
+    document.getElementById("tooltip").innerHTML = "Click to copy to clipboard.";
 }
 function copyColor() {
     colorBox.select();
