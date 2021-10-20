@@ -2,8 +2,8 @@
  This project generates random hex colors which can be used by developers and designers if they ever struggle with color selection.
  
  - Super easy to use
- <img src="https://user-images.githubusercontent.com/66639966/135715545-9848a891-f619-4ad8-b462-a58d9a578cd4.png" />
+ <img src="https://user-images.githubusercontent.com/66639966/137111896-fe377372-b39f-4695-80c4-1352b95bf652.png" />
  <br />
 
  - Copy the color code in one click.
- <img src="https://user-images.githubusercontent.com/66639966/135715504-67db0f2d-4931-412d-a433-60f8ca69540e.png" />
+ <img src="https://user-images.githubusercontent.com/66639966/137112093-232ea942-ad5f-4666-964e-49546fd85b47.png" />
