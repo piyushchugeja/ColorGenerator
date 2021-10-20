@@ -24,6 +24,5 @@ function copyColor() {
     navigator.clipboard.writeText(colorBox.value);
     document.getElementById("tooltip").innerHTML = "Copied!";
 }
-
 colorBox.addEventListener("click", copyColor);
 document.getElementById("generator").addEventListener("click", generateColor);
