@@ -63,7 +63,7 @@ body {
     }
 }
 .glowingButton:active {
-    color: #000;
+    color: #fff;
 }
 .glowingButton:active:after {
     background: #444;
